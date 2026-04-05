@@ -5,6 +5,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>QPrintBridge</RootNamespace>
+    <Authors>Jean Paul Beard</Authors>
+    <Company>jeanpaul.pro</Company>
+    <Product>QPrintBridge</Product>
+    <Description>Microservicio HTTP puente a winspool.drv para Impresión Térmica ESC/POS (Silenciosa y Sin Diálogos).</Description>
+    <Copyright>Copyright © 2026 Jean Paul Beard</Copyright>
+    <Version>1.0.0</Version>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>

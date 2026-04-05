@@ -1,0 +1,6 @@
+[2026-04-04 19:30:54] INFO: QPrintBridge Service iniciado.
+[2026-04-04 19:30:54] INFO: Escuchando en http://localhost:19100/
+[2026-04-04 19:34:59] INFO: QPrintBridge Service detenido.
+[2026-04-04 19:35:56] INFO: QPrintBridge Service iniciado.
+[2026-04-04 19:35:56] INFO: Escuchando en http://localhost:19100/ y http://127.0.0.1:19100/
+[2026-04-04 19:39:57] INFO: QPrintBridge Service detenido.

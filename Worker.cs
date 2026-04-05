@@ -8,6 +8,7 @@ namespace QPrintBridge;
 public class Worker : BackgroundService
 {
     private readonly string _url = "http://localhost:19100/";
+    private readonly string _ipUrl = "http://127.0.0.1:19100/";
 
     public Worker()
     {
@@ -19,11 +20,12 @@ public class Worker : BackgroundService
 
         using var listener = new HttpListener();
         listener.Prefixes.Add(_url);
+        listener.Prefixes.Add(_ipUrl);
 
         try
         {
             listener.Start();
-            SimpleLogger.LogInfo($"Escuchando en {_url}");
+            SimpleLogger.LogInfo($"Escuchando en {_url} y {_ipUrl}");
         }
         catch (Exception ex)
         {

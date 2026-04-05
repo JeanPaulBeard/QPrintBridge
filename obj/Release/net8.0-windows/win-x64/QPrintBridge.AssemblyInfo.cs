@@ -10,10 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("QPrintBridge")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("jeanpaul.pro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2026 Jean Paul Beard")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Microservicio HTTP puente a winspool.drv para Impresión Térmica ESC/POS (Silencio" +
+    "sa y Sin Diálogos).")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc3f3f2aaccea403fdc2e833aeb9522fc8143375")]
 [assembly: System.Reflection.AssemblyProductAttribute("QPrintBridge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QPrintBridge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

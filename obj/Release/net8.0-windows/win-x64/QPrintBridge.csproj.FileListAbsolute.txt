@@ -231,3 +231,4 @@ C:\xampp\htdocs\QPrintBridge\obj\Release\net8.0-windows\win-x64\refint\QPrintBri
 C:\xampp\htdocs\QPrintBridge\obj\Release\net8.0-windows\win-x64\QPrintBridge.pdb
 C:\xampp\htdocs\QPrintBridge\obj\Release\net8.0-windows\win-x64\QPrintBridge.genruntimeconfig.cache
 C:\xampp\htdocs\QPrintBridge\obj\Release\net8.0-windows\win-x64\ref\QPrintBridge.dll
+C:\xampp\htdocs\QPrintBridge\obj\Release\net8.0-windows\win-x64\QPrintBridge.sourcelink.json
