@@ -26,7 +26,7 @@ El flujo de trabajo es el siguiente:
 
 ### Requisitos Previos
 * Windows 10 / 11 / Server.
-* .NET Runtime 8.0 (o superior) instalado en la máquina de recepción.
+* **No requiere la instalación de .NET Runtime** en la máquina de destino (el ejecutable generado es completamente auto-contenido).
 * La impresora térmica debe estar instalada en el Panel de Control de Windows (recomendable usar el controlador *"Generic / Text Only"* si es una impresora genérica ESC/POS).
 
 ### Compilación e Instalación Automática
@@ -35,13 +35,14 @@ Para compilar e instalar el servicio en Windows:
 
 1. Asegúrate de tener instalado el [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 2. Clona el repositorio y abre una terminal en la carpeta del proyecto.
-3. Ejecuta el comando de publicación para generar el ejecutable autocontenido:
+3. Ejecuta el comando de publicación para generar el ejecutable en un único archivo (`Single-File`):
 
 ```bat
-dotnet publish -c Release -r win-x64 --self-contained
+dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
-4. Navega a la carpeta generada (usualmente `bin\Release\net8.0-windows\win-x64\publish`).
+4. Navega a la carpeta generada: `bin\Release\net8.0-windows\win-x64\publish`. 
+Allí encontrarás un único archivo maestro **`QPrintBridge.exe`** (ejecutable auto-contenido con inyección de metadatos), junto a la configuración básica y tu `gestor_servicio.bat`.
 5. Ejecuta **como Administrador** el archivo `gestor_servicio.bat` (el cual se copiará automáticamente al compilar).
 6. Usa el menú interactivo para instalar (Opción 1) e iniciar (Opción 2) el servicio de Windows `QPrintBridge Service`.
 
