@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Microservicio HTTP puente a winspool.drv para Impresión Térmica ESC/POS (Silencio" +
     "sa y Sin Diálogos).")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c6c9d676fe9d540e0fa48c3ebfbd623ae9ffb8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dd01bf8a2e7065bd08193c9d7ec95b5818d7fb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("QPrintBridge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QPrintBridge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

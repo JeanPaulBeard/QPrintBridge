@@ -41,10 +41,10 @@ Para compilar e instalar el servicio en Windows:
 dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
-4. Navega a la carpeta generada: `bin\Release\net8.0-windows\win-x64\publish`. 
-Allí encontrarás un único archivo maestro **`QPrintBridge.exe`** (ejecutable auto-contenido con inyección de metadatos), junto a la configuración básica y tu `gestor_servicio.bat`.
-5. Ejecuta **como Administrador** el archivo `gestor_servicio.bat` (el cual se copiará automáticamente al compilar).
-6. Usa el menú interactivo para instalar (Opción 1) e iniciar (Opción 2) el servicio de Windows `QPrintBridge Service`.
+4. Navega a la carpeta generada: `publish`. 
+Allí encontrarás el archivo maestro **`QPrintBridge.exe`** (ejecutable auto-contenido en un único archivo).
+5. Ejecuta **`QPrintBridge.exe`** (se abrirá la ventana del gestor; confirma el aviso de elevación de permisos de administrador cuando aparezca).
+6. Usa los botones de la interfaz para **Instalar** e **Iniciar** el servicio de Windows `QPrintBridge Service`. Desde la misma ventana también puedes **Detener** o **Eliminar** el servicio.
 
 ## 📖 Referencia de la API
 

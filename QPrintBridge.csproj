@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>QPrintBridge</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
     <Authors>Jean Paul Beard</Authors>
     <Company>jeanpaul.pro</Company>
     <Product>QPrintBridge</Product>
@@ -14,6 +15,10 @@
     <PublishSingleFile>true</PublishSingleFile>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishDir>$(MSBuildProjectDirectory)\publish\</PublishDir>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)\publish\**</DefaultItemExcludes>
+    <DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,8 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="gestor_servicio.bat">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Content Remove="appsettings.json" />
   </ItemGroup>
 </Project>

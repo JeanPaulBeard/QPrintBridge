@@ -1,14 +1,28 @@
-using QPrintBridge;
+using System.Windows.Forms;
 
-var builder = Host.CreateApplicationBuilder(args);
+namespace QPrintBridge;
 
-// Habilita que el worker corra como Servicio de Windows
-builder.Services.AddWindowsService(options =>
+internal static class Program
 {
-    options.ServiceName = "QPrintBridge Service";
-});
+    [STAThread]
+    private static void Main(string[] args)
+    {
+        if (Environment.UserInteractive)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ServiceForm());
+            return;
+        }
 
-builder.Services.AddHostedService<Worker>();
+        var builder = Host.CreateApplicationBuilder(args);
+        builder.Services.AddWindowsService(options =>
+        {
+            options.ServiceName = ServiceManager.ServiceName;
+        });
+        builder.Services.AddHostedService<Worker>();
 
-var host = builder.Build();
-host.Run();
+        using var host = builder.Build();
+        host.Run();
+    }
+}
